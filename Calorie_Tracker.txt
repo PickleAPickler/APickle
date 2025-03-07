@@ -1,0 +1,37 @@
+from dataclasses import dataclass
+import numpy as np
+import matplotlib.pyplot as plt
+
+CALORIE_GOAL_LIMIT = 3000
+PROTEIN_GOAL = 180
+FAT_GOAL = 80
+CARS_GOAL = 300
+
+today = []
+
+class Food:
+    name:str
+    calories: int
+    protein: int
+    fat: int
+    carbs: int
+
+
+done = False
+
+while not done:
+    print("""
+    (1) Add a new food
+    (2) Visualise progress
+    (q) Quit
+    """      )
+
+    choice = input("Choose an option:  ")
+
+    if choice == "1":
+        print("Adding a new food!")
+        name = input("Name:   ")
+        calories: int
+        protein: int
+        fat: int
+        carbs: int
