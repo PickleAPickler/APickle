@@ -1,8 +1,6 @@
 # APickle
 Experimental Portfolio
 
-Hello! 
-
-Beginning experiments in Python. 
+Hi there, beginning experiments in Python. 
 
  Enjoy! 
