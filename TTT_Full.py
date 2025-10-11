@@ -4,13 +4,93 @@
 
 # REPO WORKING?# 
 
+'''
+To do:
+
+- clearing output? 
 
 
-from IPython.display import clear_output
+Steps: 
+
+Game 1: Fill the line:
+
+
+1. Display the line 
+2. Get input for X to go in the gaps
+3. Say 'yay, you filled in the line. Play again?'  
+
+
+
+'''
+
+#%%
+
+''' Fill the line game '''
+
+def display_board(board):  
+    print('|' + board[1] + '|' + board[2] + '|')
+
+
+def player_input():
+    marker = 'X'
+
+    while not (marker == 'X'):
+        marker = input('Player 1: You must be an X. Please type X:   ').upper()
+    if marker == 'X':
+        return ('X', 'O')
+    
+def player_choice(board):
+    position = 0
+    
+    while position not in [1,2,3]:
+        position = int(input('Choose your next position: (1-2) '))
+        
+    return position
+    
+
+alan_board = [' ']*3  
+display_board(alan_board)
+position = player_choice(alan_board)
+player1_marker = player_input()
+
+
+
+# print('choose a character to fill the space. What will you choose?: ' ) 
+
+
+# %%
+
+# %%
+
+# %%
+
+
+
+'''
+
+print("Hey! Fill up the line with whatever characters you like. Let's go!")
+
+play_game = input('Are you ready to play? Enter Yes or No.')
+
+if play_game.lower()[0] == 'y':
+    game_on = True
+else:
+    game_on = False
+
+while game_on:
+    if turn == 'Player 1':
+        # Player1's turn.
+        
+        display_board(theBoard)
+
+        '''
+
+
+# from IPython.display import clear_output
 
 # Creating function for board
 def display_board(board):
-    clear_output()  
+    # clear_output()  
     
     print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
     print('-----------')
