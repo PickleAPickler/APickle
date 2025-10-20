@@ -1,136 +1,20 @@
 
 
-
-
-''' Fill the line game in cell below '''
 #%%
-
-def display_board(board):  
-    print(board[1])
-
-def player_input():
-    marker = ''
-
-    while not (marker == 'X'):
-        marker = input('Player 1: You must be an X. Please type X:   ').upper()
-    if marker == 'X':
-        return ('X', 'O')
-    
-def place_marker(board, marker, position):
-    board[position] = marker
-    
-def player_choice(board):
-    position = 0
-    
-    while position not in [1]:
-        position = int(input('Choose your next position (1-2):   '))
-        
-    return position
-
-
-# region --- Game on function 
-# play_game = input('Are you ready to play? Enter Yes or No.')
-    
-#     if play_game.lower()[0] == 'y':
-#         game_on = True
-#     else:
-#         game_on = False
-
-#     while game_on:
-#         if turn == 'Player 1':
-#             # Player1's turn.
-# endregion  
-
-alan_board = [' ']*2  
-display_board(alan_board)
-player1_marker = player_input()
-position = player_choice(alan_board)
-place_marker(alan_board, player1_marker, position)
-
-
-# print('choose a character to fill the space. What will you choose?: ' ) 
-
-
-# %%
-
-## Get user input for line 
-### WHOOo! This cell works. Save as a test. 
-
-# place_marker(theBoard, player1_marker, position)
-
-marker = 'X'
-alan_board = ['']*2 
-position = int(input('Choose a position:   '))
-
-def display_board(board):  
-    print(board[1])
-
-# Where do you place your marker? 
-def place_marker(board, marker, position):
-    board[position] = marker
-
-# region --- player_choice function
-# def player_choice(board):
-
-#     position = 0
-    
-#     while position not in board[1, 2]:
-#         position = input('Choose your next position (1-2):   ')
-        
-#     return position
-# endregion
-
-# player_choice(alan_board)
-place_marker(alan_board, 'X', position)
-
-print(alan_board)
-
-
-
-
-
-
-
-
-
-#%%
-
-'''
-
-print("Hey! Fill up the line with whatever characters you like. Let's go!")
-
-play_game = input('Are you ready to play? Enter Yes or No.')
-
-if play_game.lower()[0] == 'y':
-    game_on = True
-else:
-    game_on = False
-
-while game_on:
-    if turn == 'Player 1':
-        # Player1's turn.
-        
-        display_board(theBoard)
-
-        '''
-
-
-# from IPython.display import clear_output
 
 # Creating function for board
 def display_board(board):
     # clear_output()  
     
-    print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
-    print('-----------')
-    print(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
-    print('-----------')
-    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
+    print(board[7] + board[8] + board[9])
+    print(board[4] + board[5] + board[6])
+    print(board[1] + board[2] + board[3])
+    
     
 
 # What marker is Player 1?
 def player_input():
-    marker = ''
+    marker = ' '
     
     while not (marker == 'X' or marker == 'O'):
         marker = input('Player 1: Do you want to be X or O? ').upper()
@@ -143,7 +27,7 @@ def player_input():
 
 # Where do you place your marker? 
 def place_marker(board, marker, position):
-    board[position] = marker
+    board[position] = marker   # the board[position] is assigned a marker
 
 
 # Who goes first? 
@@ -156,7 +40,6 @@ def choose_first():
     else:
         return 'Player 2'
     
-
 # Is there a win? 
 def win_check(board,mark):
     
@@ -168,6 +51,11 @@ def win_check(board,mark):
     (board[9] == mark and board[6] == mark and board[3] == mark) or # down the right side
     (board[7] == mark and board[5] == mark and board[3] == mark) or # diagonal
     (board[9] == mark and board[5] == mark and board[1] == mark)) # diagonal
+
+# region: win_check explanation
+# Returns    True    if a row, diagonal or column is taken. 
+# endregion 
+
 
 # Is there a free space?
 def space_check(board, position):
@@ -181,6 +69,13 @@ def full_board_check(board):
             return False
     return True
 
+# region ---> test FBC
+# test_board = ['#','X','O','o','o','o','o','o','o',' '] 
+# full_board_check(test_board) 
+# endregion
+
+
+
 # Player chooses position
 def player_choice(board):
     position = 0
@@ -189,6 +84,8 @@ def player_choice(board):
         position = int(input('Choose your next position: (1-9) '))
         
     return position
+
+
 
 # Play again? 
 def replay():
@@ -212,12 +109,11 @@ while True:
     
     if play_game.lower()[0] == 'y':
         game_on = True
-    else:
-        game_on = False
 
     while game_on:
         if turn == 'Player 1':
             # Player1's turn.
+            
             
             display_board(theBoard)
             position = player_choice(theBoard)
@@ -237,6 +133,7 @@ while True:
 
         else:
             # Player2's turn.
+            
             
             display_board(theBoard)
             position = player_choice(theBoard)

@@ -21,7 +21,7 @@ def which_symbol():
     symbol = ''
     
     while not (symbol == 'X' or symbol == 'O'):
-        symbol = input('CUNT_1: Do you want to be X or O? ').upper()
+        symbol = input('P1: Do you want to be X or O? ').upper()
 
     if symbol == 'X':
         return ('X', 'O')
@@ -40,9 +40,9 @@ import random
 def choose_first():
 
     if random.randint(0,1) == 0:
-        return 'Player 1'
+        return 'P1'
     else:
-        return 'Player 2'
+        return 'P2'
     
 
 # Is there a win? 
@@ -61,6 +61,10 @@ def win_check(grid,mark):
 def space_check(grid, position):
     
     return grid[position] == ' '
+
+# region: win_check comments
+# If the position on the grid is an empty string, it's an empty position
+# endregion
 
 # Is the grid full? 
 def full_grid_check(grid):
@@ -90,8 +94,8 @@ print('Welcome to Tic Tac Toe!')
 
 while True:
     
-    thegrid = [' '] * 10
-    player1_symbol, player2_symbol = which_symbol()
+    ALAN_grid = [' '] * 10
+    P1, P2 = which_symbol()
     turn = choose_first()
     print(turn + ' will go first.')
     
@@ -103,12 +107,12 @@ while True:
         game_on = False
 
     while game_on:
-        if turn == 'Player 1':
+        if turn == 'P1':
             # Player1's turn.
             
             GRID(thegrid)
             position = player_choice(thegrid)
-            place_symbol(thegrid, player1_symbol, position)
+            place_symbol(thegrid, P1_symbol, position)
 
             if win_check(thegrid, player1_symbol):
                 GRID(thegrid)

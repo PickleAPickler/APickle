@@ -9,7 +9,7 @@ Avoid AI? We will for now. It might come in useful later though.
 
 Let's go! '''
 
-#%%
+
 
 # 1. display board function
 
@@ -33,21 +33,19 @@ def player_input():
     else:
         return ('O', 'X')
 
-# 2. place marker function
+# 3. place marker function
 
 def place_marker(board, marker, position):
     board[position] = marker
 
-
-## Run test_board test 
+""" region --> Run test_board test 
   
 
-test_board = [' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']
-place_marker(test_board, 'X', 5)
+# test_board = [' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']
+# place_marker(test_board, 'X', 5)
 
-display_board(test_board)
-
-#%%
+# display_board(test_board)
+# endregion """
 
 # 4. choose_first -> who goes first? 
 import random
@@ -57,6 +55,11 @@ def choose_first():
         return 'P1'
     else: 
         return 'P2'
+    
+# region --> choose_first test
+
+choose_first()
+# endregion
 
 # 5. Win check -> is a diagnonal, row or column struck?
 
@@ -71,19 +74,32 @@ def win_check(board, mark):
     (board[1] == mark and board[5] == mark and board[9] == mark) or
     (board[3] == mark and board[5] == mark and board[7] == mark)) 
 
+# region win_check test
+# wintest_board =  ['#','X','X','O',' ',' ',' ',' ',' ',' ']
+# win_check(wintest_board, 'X')
+# endregion 
+
 
 # 6. Space_check -> is there a spare space? 
 
-def space_check(board): 
+def space_check(board, position): 
 
-    return board[position] == ''
+    return board[position] == ' '
 
+'''returns TRUE if there's space.  FALSE if board is full'''
 
 # 7. Full_board_check = is the board full? If so, it's a draw
 
-def full_board_check(): 
+def full_board_check(board): 
+    for i in range (1-10):
+        if space_check(board, i): # if space_check is True (there is a space), FBC returns false
+            return False
+    return True
 
-    space_check(board, i)
+test_board = ['#','X',' ',' ',' ',' ',' ',' ',' ',' '] 
+full_board_check(test_board) 
+
+     
 
 
 
