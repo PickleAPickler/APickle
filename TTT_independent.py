@@ -9,18 +9,53 @@ Avoid AI? We will for now. It might come in useful later though.
 
 Let's go! '''
 
+'''
+Short Resources for “Googling Like a Dev”
+
+MakeUseOf — “21 Tips and Tricks to Master the Art of Googling as a Developer”
+Lots of practical developer-specific Google search tips (using site:, -term, OR, etc.). 
+MakeUseOf
+
+Medium – “How to Google Effectively as a Developer” by Niamh Power
+Pretty good mindset + phrasing advice, especially for tech-specific searches. 
+Medium
+
+Dev Solutions – “Google Search Tips 2025”
+Updated and modern techniques, including how to use search operators for developers. 
+devsolus.com
+
+CodeProject – “How to Use Google … for Programming Help”
+A really solid breakdown of how to structure your queries with language names & operators. 
+CodeProject
+
+Medium – “10 Debugging Tricks Every Developer Should Know”
+Not purely about Google, but helps you combine debugging and searching: how to isolate problems, log sensibly, and search smart. 
+Medium
+
+
+'''
+# TEST/DEBUG IDEAS
+# Test that skips the gameplay. You don't need to play the game in full to see what occurs at the end of the game. 
+
+
+
+
 
 
 # 1. DISPLAY BOARD
+import os 
 
-def display_board(board): 
-
+def show_board(board): 
+    os.system('cls')    # https://www.geeksforgeeks.org/python/clear-screen-python/?utm_source=chatgpt.com
+    
     print('|' + board[7] + '|' +  board[8] + '|' + board[9] + '|')
     print('|' + board[4] + '|' +  board[5] + '|' + board[6] + '|')
     print('|' + board[1] + '|' +  board[2] + '|' + board[3] + '|')
 
 
-## How to update game board? 
+
+
+## How to clear the display? 
 # https://www.youtube.com/watch?v=v4oW-yEffXs
 # https://eitca.org/computer-programming/eitc-cp-ppf-python-programming-fundamentals/getting-started/lists-and-tic-tac-toe-game/examination-review-lists-and-tic-tac-toe-game/how-can-we-display-the-game-board-in-a-grid-like-format-using-a-for-loop-in-python/
 # Peirian data? There was a solution there surely...
@@ -50,7 +85,7 @@ def place_marker(board, marker, position):
 # test_board = [' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']
 # place_marker(test_board, 'X', 5)
 
-# display_board(test_board)
+# show_board(test_board)
 # endregion 
 
 # 4. CHOOSE_FIRST -> WHO GOES FIRST? 
@@ -136,15 +171,15 @@ def choose_position(board):
 # endregion
 
 
-# 9. replay = play again? 
+# 9. play_again = play again? 
 
-def replay():
+def play_again():
 
-    return input('Would you like to play again y or n?:   ').lower().startswith('y')
+    return input('Would you like to play again yes(y) or no(n)?:   ').lower().startswith('y')
 
 ### GAME CODE 
 
-print('Welcome to TTT!')
+print('Welcome to Noughts and Crosses!')
 
 # import pdb; pdb.set_trace()  
 
@@ -173,20 +208,20 @@ while True:
     while game_on:
         if turn == 'P1':
             
-            display_board(alan_board)
+            show_board(alan_board)
             position = choose_position(alan_board)
             place_marker(alan_board, P1Marker, position)
 
         
 
             if win_check(alan_board, P1Marker):
-                display_board(alan_board)
+                show_board(alan_board)
                 print('Well done! You won.')
                 game_on = False
 
             else:
                 if full_board_check(alan_board):
-                    display_board(alan_board)
+                    show_board(alan_board)
                     print(' The game is a draw! ')
                     break 
                 else:
@@ -196,25 +231,25 @@ while True:
 
 
 
-            display_board(alan_board)
+            show_board(alan_board)
             position = choose_position(alan_board)
             place_marker(alan_board, P2Marker, position)
 
             if win_check(alan_board, P2Marker):
-                display_board(alan_board)
+                show_board(alan_board)
                 print('Well done! You won.')
                 game_on = False
 
             else:
                 if full_board_check(alan_board):
-                    display_board(alan_board)
+                    show_board(alan_board)
                     print(' The game is a draw! ')
                     break
                 else:
                     turn = 'P1'
         
  
-    if not replay():
+    if not play_again():
         break
 
             
