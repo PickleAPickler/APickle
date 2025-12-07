@@ -23,7 +23,7 @@ Based on a terminal version of Tic-Tac-Toe (TTT), this repo contains tests, inte
 * 'No pleasantries' versions:
   - you are assigned either an X or O and you just go from there 
   - no 'ready to play' option, the games loop just starts
-  - no order of play, you're just go first or second. Also no 'you will go first' etc.
+  - no order of play, you just go first or second. Also no 'you will go first' etc.
 
 ### My learning:
 
