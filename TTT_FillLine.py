@@ -1,6 +1,6 @@
 
 # GOAL: Testing the     place_marker()    function. Can we input symbols onto the board? 
-# UPDATE: We got the position input, Yay! Now we need to make the game so the line fills up  
+# UPDATE: We got the position input! Now we need to make the game so the line fills up  
 
 ## Creating function for board
 def display_board(board):
