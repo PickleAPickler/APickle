@@ -1,7 +1,7 @@
 # Tic-Tac-Toe Playground  :o::heavy_multiplication_x:🧪
 
 
-Welcome to experiments with Tic-Tac-Toe! 
+ Welcome to experiments with Tic-Tac-Toe! 
 
 Based on a terminal version of Tic-Tac-Toe (TTT), this repo contains tests, intentional bugs and alternate forms of the game. What you will find:
 
