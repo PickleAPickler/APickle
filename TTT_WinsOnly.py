@@ -1,58 +1,12 @@
 
-### Yo!
-'''
-Another independent code-out of TTT. This time in the git repository. 
-If you get to snag, work it out by error messages, testing and docs etc.
-Avoid AI? We will for now. It might come in useful later though. 
-
-*I surround myself with love*
-
-Let's go! '''
-
-'''
-Short Resources for “Googling Like a Dev”
-
-MakeUseOf — “21 Tips and Tricks to Master the Art of Googling as a Developer”
-Lots of practical developer-specific Google search tips (using site:, -term, OR, etc.). 
-MakeUseOf
-
-Medium – “How to Google Effectively as a Developer” by Niamh Power
-Pretty good mindset + phrasing advice, especially for tech-specific searches. 
-Medium
-
-Dev Solutions – “Google Search Tips 2025”
-Updated and modern techniques, including how to use search operators for developers. 
-devsolus.com
-
-CodeProject – “How to Use Google … for Programming Help”
-A really solid breakdown of how to structure your queries with language names & operators. 
-CodeProject
-
-Medium – “10 Debugging Tricks Every Developer Should Know”
-Not purely about Google, but helps you combine debugging and searching: how to isolate problems, log sensibly, and search smart. 
-Medium
-
-
-'''
-### Test Versions of the project ###
-
-'''
-1. Make the board appear. The have option to quit.
-2. No winner or loser. Just a full board ends the game
-3. No pleasantries - you are assigned either an X or O and you just go from there 
-4. No pleasantries - no 'ready to play' option, the games loop just starts
-5. No pleasantries - no order of play, you're just go first or second. Also no 'you will go first' etc. 
-
-e.g., You are assigned O. What's your first move? 
-
-'''
+### WINS ONLY 
+#  Keep going until you get a line of X's horizonally, vertically or diagonally. 
+# You can't lose! 
 
 
 
 # 1. DISPLAY BOARD
 import os 
-
-
 
 def display_board(board): 
     os.system('cls')    # https://www.geeksforgeeks.org/python/clear-screen-python/?utm_source=chatgpt.com
