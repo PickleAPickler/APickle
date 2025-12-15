@@ -1,7 +1,6 @@
 
 ### WINS ONLY 
-#  Keep going until you get a line of X's horizonally, vertically or diagonally. 
-# You can't lose! 
+#  Keep going until you get a line of X's horizonally, vertically or diagonally. You can't lose! 
 
 
 
