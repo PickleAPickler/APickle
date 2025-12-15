@@ -17,16 +17,16 @@ def display_board(board):
 
 # 2. PLAYER INPUT -> WHOS WHAT MARKER, X OR O?
 
-def player_input():
+# def player_input():
 
-    marker = ' '
-    while not (marker == 'X' or marker == 'O'):
-        marker = input('Choose a marker X or O:  ').upper()
+#     marker = ' '
+#     while not (marker == 'X' or marker == 'O'):
+#         marker = input('Choose a marker X or O:  ').upper()
 
-    if marker == 'X':
-        return ('X', 'O')
-    else:
-        return ('O', 'X')
+#     if marker == 'X':
+#         return ('X', 'O')
+#     else:
+#         return ('O', 'X')
 
 # 3. PLACE MARKER FUNCTION
 
@@ -139,21 +139,16 @@ def replay():
 
 print('Welcome to TTT!')
 
-# import pdb; pdb.set_trace()  
-
-''' pbd did not run with the script at first, but when isolated to jupyter window, it ran. 
-Then, it ran without the jupyter window. Why didn't run before? '''
 
 while True:
 
     alan_board = [' ']*10
-    P1Marker, P2Marker, = player_input()
-    turn = choose_first()
-    print('You are' + turn + '.' + 'you will go first')
+    marker = 'X'
 
 # region CHECK THIS OUT: https://realpython.com/python-while-loop/
 # endregion 
     play_game = input('Are you ready to play?   ')
+    
     
     if play_game.lower()[0] == 'y':
         game_on = True
@@ -161,18 +156,17 @@ while True:
     #     game_on = False   ## Watch it! Why is this not necessary? 
         
     while game_on:
-
-        if turn == 'P1':
-
+        
             display_board(alan_board)
+            print("You have been automatically assigned X as a marker. Deal with it, you'll win anyway! ")
             position = choose_position(alan_board)
-            place_marker(alan_board, P1Marker, position)
+            place_marker(alan_board, marker, position)
 
-            if win_check(alan_board, P1Marker):
+            if win_check(alan_board, marker):
                 display_board(alan_board)
                 print('congrats, you won!')
                 game_on = False
                 
                 if not replay():
-                    quit()
+                    quit() 
        
