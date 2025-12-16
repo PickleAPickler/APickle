@@ -3,9 +3,11 @@
 
  Welcome to experiments with Tic-Tac-Toe! 
 
-Based on a terminal version of Tic-Tac-Toe (TTT), this repo contains tests, intentional bugs and alternate forms of the game. What you will find:
+ Based on a terminal version of Tic-Tac-Toe (TTT) from Pierian Data's Python Bootcamp https://github.com/Pierian-Data/Complete-Python-3-Bootcamp
+ 
+ This repo contains tests, intentional bugs and alternate forms of the game. What you will find:
 
-## Main TTT game 
+## Main TTT game (TTT_Full.py)
  The game in its unaltered state
   
 ## TTT Tests:
