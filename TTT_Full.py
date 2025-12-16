@@ -1,14 +1,14 @@
 
+## Pierian data source code
 
-# SWITCH REPO TEST. CRUMBS#
-
-
-
-#from IPython.display import clear_output
 
 # Creating function for board
+
+import os
+
 def display_board(board):
-   # clear_output()  
+    
+    os.system('cls')
     
     print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
     print('-----------')
