@@ -50,7 +50,7 @@ def replay():
    return input("Would you like to play again (y or n)?:    ").lower().startswith('y')
 
 
-### GMAE LOGIC
+### GAME LOGIC
 
 while True:
     
