@@ -97,17 +97,11 @@ while True:
     turn = choose_first()
     # print(turn + ' will go first.')
 
-    if choose_first():
-        game_on = True
-    else:
-        game_on = False
+    
+    game_on = True
 
     while game_on:
 
-        
-    
-
-        
         if turn == 'Player 1':
             # Player1's turn.
             print(turn + ' will go first.')
