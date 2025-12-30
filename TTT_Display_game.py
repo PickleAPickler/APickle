@@ -1,6 +1,6 @@
 
 ## Display Board 'game': The board is displayed - that's the game! 
-# 
+ 
 
 
 def display_board(board):
@@ -17,7 +17,7 @@ def replay():
 
 # Game Logic 
 
-print('Welcome to Display the Board game!')
+print('Welcome to Display the Board game')
 
 while True:
 
