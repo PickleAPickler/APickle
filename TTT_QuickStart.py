@@ -1,5 +1,6 @@
 
-### Pierian data source code
+### Quick Start game - no 'ready to play' option
+# SKIP TO LINE 90 FOR GAME LOOP
 
 
  # Creating function for board
