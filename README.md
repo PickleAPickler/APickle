@@ -5,7 +5,7 @@
 
  Based on a terminal version of Tic-Tac-Toe (TTT) from Pierian Data's Python Bootcamp https://github.com/Pierian-Data/Complete-Python-3-Bootcamp
  
- This repo contains tests refactored forms of the game. Just copy and paste the code into a Python editor and hit play. 
+ This repo contains tests and refactored forms of the game. Just copy and paste the code into a Python editor and hit play. 
 
 ## Main TTT game (TTT_Full.py)
  The game in its unaltered state
