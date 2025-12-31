@@ -9,7 +9,7 @@
 import os 
 
 def display_board(board): 
-   os.system('os')
+   os.system('cls')
    
    # A single row of 2 spaces
    print('|' + board[1] + '|' + board[2] + '|')
@@ -38,8 +38,8 @@ def full_board_check(board):
 def player_choice(board):
     position = 0
     
-    while position not in [1,2,3] or not space_check(board, position): 
-        position = int(input('Choose your next position (1-3):     '))
+    while position not in [1,2] or not space_check(board, position): 
+        position = int(input('Choose your next position (1-2):     '))
         
     return position
 
