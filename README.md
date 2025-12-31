@@ -17,7 +17,7 @@
 
 ## In progress: 
 
-* No winner or loser. Just a full board ends the game
+* No winner or loser - Just a full board ends the game (TTT_FullBoardGame.py)
 * 'No pleasantries' versions:
   - no 'ready to play' option, the games loop just starts (TTT_QuickStart.py)
   - you are assigned either an X or O and you just go from there 
