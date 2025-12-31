@@ -1,33 +1,20 @@
 
-### COMPLETE THE ROW
 
-# Testing the inserting of markers on the board. 
+### COMPLETE THE BOARD
+# Both players take it in turns to complete the board. Everyone wins! 
+
+ 
 import os 
 
-
 ## Creating function for board
-
-
 
 def display_board(board): 
    os.system('cls')
    
-   # A single row of 2 spaces
+   # 6 spaces as a test
    print(' ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
    print('-----------')
    print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
-
-   print(turn_message)
-
-
-
-
-def turn_message(turn):
-    os.system('cls')
-    message = turn + ' will go first'
-
-    return message
-
 
    
 ## Where do you place your marker? 
@@ -36,7 +23,6 @@ def place_marker(board, marker, position):
 
 
 ## Player chooses a marker 
-
 
 def player_input():
 
@@ -68,6 +54,7 @@ def choose_first():
         return 'Player_1'
     else:
         return 'Player_2'  
+
 
 ## Check for full board: 
 
@@ -102,9 +89,8 @@ while True:
     alan_board = [' ']*7
     player1_marker,  player2_marker = player_input()
     turn = choose_first()
-    # print(turn + ' will go first')
+    print(turn + ' will go first')
     
-
 
     game_on = True
 
@@ -140,6 +126,3 @@ while True:
 
     if not replay():
         quit()
-
-
-
