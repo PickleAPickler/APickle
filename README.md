@@ -22,6 +22,7 @@
   - no 'ready to play' option, the games loop just starts (TTT_QuickStart.py)
   - you are assigned either an X or O and you just go from there 
   - no order of play, you just go first or second. Also no 'you will go first' etc.
+* Writing unit tests for functions 
 
 ### My learning:
 
