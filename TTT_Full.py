@@ -4,6 +4,10 @@
 
 # Creating function for board
 
+"""
+Prints out a board of nine spaces in the style of a telephone keypad
+"""
+
 import os
 
 def display_board(board):
@@ -25,7 +29,7 @@ def player_input():
         marker = input('Player 1: Do you want to be X or O? ').upper()
 
     if marker == 'X':
-        return ('X', 'O')
+        return ('X', 'O') # Tuple is returned for Player 1 and 2 respectively
     else:
         return ('O', 'X')
     
@@ -33,6 +37,9 @@ def player_input():
 # Where do you place your marker? 
 def place_marker(board, marker, position):
     board[position] = marker
+
+    """Takes in the board, Player marker and position - this fixes the marker to the board.
+      See lines 119 and 138 to see in game logic. """
 
 
 # Who goes first? 
