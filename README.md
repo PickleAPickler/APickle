@@ -8,7 +8,8 @@
  This repo contains tests and refactored forms of the game. Just copy and paste the code into a Python editor and hit play. 
 
 ## Main TTT game (TTT_Full.py)
- The game in its unaltered state
+ - The game in its unaltered state
+ - Contains explanations of code
   
 ## TTT Tests:
 - Fill the row (TTT_RowTest.py) -> a test version of entering X and O markers on a line 
@@ -23,6 +24,11 @@
   - you are assigned either an X or O and you just go from there 
   - no order of play, you just go first or second. Also no 'you will go first' etc.
 * Writing unit tests for functions 
+
+## Some notes:
+
+- TTT Tests + In progress will contain some duplicate code from TTT_Full.py.
+- Any changes to the code will be commented upon
 
 ### My learning:
 
